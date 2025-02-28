@@ -45,7 +45,7 @@ pre {
 
 .container {
   position: absolute;
-  top: 140px;
+  top: 208px;
   left: 480px;
   width: 50%;
   height: 664px;
@@ -113,8 +113,13 @@ pre {
   background-size: cover;
   background-position: right;
   background-blend-mode: color; /* ทำให้รูปภาพผสมกับ gradient */
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
+.mail:hover {
+  opacity: 0.7;
+}
 .mail:focus {
   outline: none; /* ปิดเส้นขอบเมื่อปุ่มได้รับ focus */
 }
@@ -125,6 +130,7 @@ pre {
   background-size: cover;
   background-position: right;
   background-blend-mode: color; /* ทำให้รูปภาพผสมกับ gradient */
+  opacity: 1 !important;
 }
 
 .icon-box {
@@ -323,8 +329,11 @@ pre {
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+  opacity: 1;
 }
-
+.pagination button:hover {
+  opacity: 0.8;
+}
 .pagination button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -393,20 +402,30 @@ pre {
   display: flex;
   justify-content: flex-end; /* จัดตำแหน่งไปทางขวา */
   margin-top: 20px; /* เพิ่มระยะห่างจาก pagination */
+  background: transparent;
+  border: none;
+  cursor: pointer; /* แสดง cursor แบบปุ่มเมื่อ hover */
+  padding: 0; /* ลบ padding ถ้าไม่ต้องการ */
 }
 
 .collet-content {
   font-size: 16px;
   font-weight: bold;
+  background-image: url(/src/assets/collect-bg.png);
+  width: 183px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* จัดตำแหน่งข้อความให้อยู่กลาง */
 }
 
 .collet-container {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   position: absolute;
-  bottom: -32px;
-  right: 264px;
+  bottom: -78px;
+  right: 74px;
   margin-top: 10px;
 }
 

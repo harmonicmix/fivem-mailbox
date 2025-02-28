@@ -155,7 +155,9 @@ const App: React.FC = () => {
                   <button
                     key={mail.id}
                     className={`mail ${
-                      mail.id === 1 ? "active bg-logo" : "bg-logo"
+                      mail.id === selectedMail?.id
+                        ? "active bg-logo"
+                        : "bg-logo"
                     }`}
                     onClick={() => setSelectedMail(mail)} // เมื่อกด จะตั้งค่า selectedMail
                   >
@@ -261,9 +263,11 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="collet-container">
-              <div className="collet-content">Collet</div>
-            </div>
+            <button className="collet-container">
+              <div className="collet-content">
+                <h2 style={{ marginLeft: "20px", color: "white" }}>COLLECT</h2>
+              </div>
+            </button>
           </div>
         </div>
       </div>
